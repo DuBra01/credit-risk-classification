@@ -1,47 +1,47 @@
 # credit-risk-classification
- 📊 Análisis de Clasificación de Riesgo Crediticio 🚀
+📊 Credit Risk Classification Analysis 🚀
 
-📌 Descripción del Proyecto
+📌 Project Description
 
-Este proyecto implementa un modelo de Regresión Logística para predecir el estado de un préstamo (saludable o de alto riesgo). Se utiliza un conjunto de datos con información financiera de los prestatarios y se aplican técnicas de aprendizaje supervisado para entrenar y evaluar el modelo. 🔍📈
+This project implements a Logistic Regression model to predict the status of a loan (healthy or high-risk). A dataset containing borrowers' financial information is used, and supervised learning techniques are applied to train and evaluate the model. 🔍📈
 
-🛠️ Pasos Realizados
+🛠️ Steps Taken
 
-1️⃣ Carga y Preparación de Datos
+1️⃣ Data Loading and Preparation
 
-✅ Se cargó el archivo lending_data.csv en un DataFrame de Pandas.
-✅ Se separaron las variables en:
+✅ The file lending_data.csv was loaded into a Pandas DataFrame.
+✅ Variables were separated into:
 
-X (features): Características del prestatario.
+X (features): Borrower characteristics.
 
-y (target): Estado del préstamo (0: saludable, 1: alto riesgo).
-✅ Se dividió el dataset en conjuntos de entrenamiento y prueba.
+y (target): Loan status (0: healthy, 1: high-risk).
+✅ The dataset was split into training and testing sets.
 
-2️⃣ Entrenamiento del Modelo con Datos Originales
+2️⃣ Training the Model with Original Data
 
-🚀 Se instanció y entrenó un modelo de Regresión Logística con los datos originales.
-📊 Se evaluó el rendimiento utilizando:
+🚀 A Logistic Regression model was instantiated and trained with the original data.
+📊 Model performance was evaluated using:
 
 Balanced Accuracy Score 🎯
 
-Matriz de confusión 📉
+Confusion Matrix 📉
 
-Reporte de clasificación 📑
-⚠️ Se encontró un desequilibrio significativo en las clases (muchos préstamos saludables y pocos de alto riesgo), lo que afectaba la capacidad del modelo para detectar correctamente los préstamos de alto riesgo. ❌
+Classification Report 📑
+⚠️ A significant class imbalance was found (many healthy loans and few high-risk loans), which affected the model’s ability to correctly identify high-risk loans. ❌
 
-3️⃣ Manejo del Desbalance con Oversampling
+3️⃣ Handling Imbalance with Oversampling
 
-🔄 Se utilizó RandomOverSampler de imbalanced-learn para equilibrar las clases duplicando ejemplos de la clase minoritaria (1).
-🎯 Se reentrenó el modelo con los datos balanceados.
-📊 Se evaluó nuevamente el modelo con los mismos métricos.
+🔄 RandomOverSampler from imbalanced-learn was used to balance the classes by duplicating examples from the minority class (1).
+🎯 The model was retrained with the balanced data.
+📊 Performance was re-evaluated using the same metrics.
 
-4️⃣ Resultados y Conclusiones
+4️⃣ Results and Conclusions
 
-✅ Balanced Accuracy Score mejoró a 0.9936 después del oversampling. 🚀
-✅ Recall para los préstamos de alto riesgo aumentó al 99% 📈, indicando que el modelo ahora es mucho mejor detectando posibles incumplimientos.
-⚠️ Se produjo un ligero aumento en los falsos positivos (préstamos saludables clasificados como riesgosos), lo que es un compromiso aceptable para minimizar préstamos incumplidos. 🔄
+✅ Balanced Accuracy Score improved to 0.9936 after oversampling. 🚀
+✅ Recall for high-risk loans increased to 99% 📈, meaning the model is much better at detecting potential defaults.
+⚠️ A slight increase in false positives (healthy loans classified as risky) was observed, which is an acceptable trade-off for minimizing loan defaults. 🔄
 
-🏆 Conclusión Final
+🏆 Final Conclusion
 
-💡 La aplicación de RandomOverSampler mejoró significativamente la capacidad del modelo para detectar préstamos de alto riesgo, logrando un equilibrio adecuado entre sensibilidad y precisión. 🔥
-🎯 Esto demuestra la importancia de abordar el desbalance de clases en problemas de clasificación para obtener predicciones más justas y útiles. 💪📊
+💡 Applying RandomOverSampler significantly improved the model's ability to detect high-risk loans, achieving a good balance between sensitivity and precision. 🔥
+🎯 This highlights the importance of addressing class imbalance in classification problems to obtain fairer and more useful predictions. 💪📊
